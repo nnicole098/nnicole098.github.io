@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Final Project</title>
+      <link rel="stylesheet" href="index.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+   </head>
+   <style>
+    body {
+      background-image: url('https://media.istockphoto.com/id/1381002862/vector/minimal-abstract-watercolor-background-with-gold-texture-vector.jpg?b=1&s=612x612&w=0&k=20&c=Ydp91mNUK_rUQb-I6dEQ3fK8-h1Px7DQzVYR31iBTdc=');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+    </style>
+      <div class="menu-container">
+         <div class="button">
+            About Me
+            <span class="fas fa-bars"></span>
+         </div>
+         <ul>
+            <li><a href="Life.html">Stages of Life</a></li>
+            <li><a href="fav.html">Favorites</a></li>
+            <li><a href="embarassing.html">Most Embarassing moment</a></li>
+            <li><a href="memo.html">Most Memorable moment</a></li>
+            <li><a href="friends.html">Friends</a></li>
+            <li><a href="destination.html">Dream Destinations</a></li>
+            <li><a href="5years.html">5 years From now</a></li>
+            <li><a href="goals.html">Motivation, Dreams & Goals</a></li>
+
+         </ul>
+      </div>
+      <script>
+         $(document).ready(function(){
+           $('.button').click(function(){
+             if($(this).hasClass('expand')){
+               $('ul').slideUp(function(){
+                 $('.button').removeClass('expand');
+                 $('.fas').removeClass('expand')
+               });
+             }else{
+               $(this).addClass('expand');
+               setTimeout(function(){
+                 $('.fas').addClass('expand');
+                 $('ul').stop().slideDown();
+               },200);
+             }
+           });
+         });
+      </script>
+   </body>
+</html>
